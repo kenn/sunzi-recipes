@@ -1,10 +1,10 @@
-# Munin
+# Munin node
 
-if dpkg -l "munin"; then
-  echo 'munin already installed'
+if dpkg -l "munin-node"; then
+  echo 'munin-node already installed'
 else
-  aptitude -y install munin
-
+  aptitude -y install munin-node
+  
   # Backup the original config so you can refer it later
-  cp /etc/munin/munin.conf /etc/munin/munin.default.conf
+  cp /etc/munin/munin-node.conf /etc/munin/munin-node.default.conf
 fi
