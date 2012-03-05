@@ -1,6 +1,6 @@
 # Git
 
-if dpkg -l "git-core"; then
+if dpkg -s "git-core"; then
   echo 'git-core already installed'
 else
   aptitude -y install git-core

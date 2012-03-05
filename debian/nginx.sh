@@ -1,6 +1,6 @@
 # Nginx
 
-if dpkg -l "nginx"; then
+if dpkg -s "nginx"; then
   echo "nginx already installed"
 else
   aptitude -y install nginx

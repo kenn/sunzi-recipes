@@ -1,6 +1,6 @@
 # Munin node
 
-if dpkg -l "munin-node"; then
+if dpkg -s "munin-node"; then
   echo 'munin-node already installed'
 else
   aptitude -y install munin-node

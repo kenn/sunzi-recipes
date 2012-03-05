@@ -1,6 +1,6 @@
 # Munin
 
-if dpkg -l "munin"; then
+if dpkg -s "munin"; then
   echo 'munin already installed'
 else
   aptitude -y install munin

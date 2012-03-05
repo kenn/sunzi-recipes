@@ -1,7 +1,7 @@
 # Setup Server Monitoring on New Relic
 # $1: New Relic license key
 
-if dpkg -l "newrelic-sysmond"; then
+if dpkg -s "newrelic-sysmond"; then
   echo 'newrelic-sysmond already installed'
 else
   # Add New Relic repository

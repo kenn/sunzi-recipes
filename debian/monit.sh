@@ -1,6 +1,6 @@
 # Monit
 
-if dpkg -l "monit"; then
+if dpkg -s "monit"; then
   echo 'monit already installed'
 else
   aptitude -y install monit
