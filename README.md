@@ -43,3 +43,13 @@ aptitude -y install nginx
 ```
 
 and `sunzi deploy` will install the latest Nginx.
+
+Other repositories
+------------------
+
+Here's a list of other Sunzi recipes available, for your convenience.
+
+If you have a public repository, fork this project, add yours to this README and send a pull request.
+
+* https://github.com/kyohsuke/sunzi-recipes
+* https://github.com/ubilabs/sunzi-recipes
