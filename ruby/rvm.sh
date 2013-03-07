@@ -2,8 +2,9 @@
 
 if [ -d /usr/local/rvm ]; then
   echo 'RVM already installed'
+  rvm get latest
 else
-  bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+  curl -L https://get.rvm.io | bash -s stable --ruby
   echo '[[ -s /usr/local/rvm/scripts/rvm ]] && source /usr/local/rvm/scripts/rvm' >> ~/.bash_profile
 fi
 source ~/.bash_profile
