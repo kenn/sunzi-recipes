@@ -39,7 +39,7 @@ with `install.sh`:
 ```bash
 source recipes/dotdeb.sh
 
-aptitude -y install nginx
+apt-get -y install nginx
 ```
 
 and `sunzi deploy` will install the latest Nginx.

@@ -1,10 +1,6 @@
 # Monit
 
-if dpkg -s "monit"; then
-  echo 'monit already installed'
-else
-  aptitude -y install monit
-
+if sunzi.install "monit"; then
   # Backup the original config so you can refer it later
   cp /etc/monit/monitrc /etc/monit/monitrc.default
 
