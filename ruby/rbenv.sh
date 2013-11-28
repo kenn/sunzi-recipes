@@ -37,9 +37,11 @@ else
   # for searching packages
   apt-get -y install pkg-config
 
-  # install rbenv and ruby-build
-  git clone git://github.com/sstephenson/rbenv.git /usr/local/rbenv
-  git clone git://github.com/sstephenson/ruby-build.git /usr/local/rbenv/plugins/ruby-build
+  # install rbenv, ruby-build, and auto-rehash plugin
+  git clone https://github.com/sstephenson/rbenv.git /usr/local/rbenv
+  git clone https://github.com/sstephenson/ruby-build.git /usr/local/rbenv/plugins/ruby-build
+  git clone https://github.com/sstephenson/rbenv-gem-rehash.git /usr/local/rbenv/plugins/rbenv-gem-rehash
+
   echo 'export RBENV_ROOT="/usr/local/rbenv"' >> /etc/profile.d/rbenv.sh
   echo 'export PATH="$RBENV_ROOT/bin:$PATH"' >> /etc/profile.d/rbenv.sh
   echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh
