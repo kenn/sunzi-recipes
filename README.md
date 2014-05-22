@@ -53,3 +53,4 @@ If you have a public repository, fork this project, add yours to this README and
 
 * https://github.com/kyohsuke/sunzi-recipes
 * https://github.com/ubilabs/sunzi-recipes
+* https://github.com/crslade/sunzi-recipes
