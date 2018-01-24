@@ -12,5 +12,6 @@ else
   dpkg -i $MYSQL_DEB_LOCAL
   rm $MYSQL_DEB_LOCAL
 
-  sunzi.mute 'apt-get -q -y install mysql-server'
+  apt-get update
+  apt-get -q -y install mysql-server
 fi
