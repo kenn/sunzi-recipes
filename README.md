@@ -7,42 +7,31 @@ This repository is a public source for Sunzi recipes, to demonstrate what Sunzi 
 
 Recipes in this repository can be directly retrieved by `sunzi compile`. Just point to the URL of raw files in `sunzi.yml`.
 
+Sunzi is Linux distro agnostic in itself, but in this repository most recipes are [Debian](http://www.debian.org/).
+
 **Warning**: Everything in this repository is a work in progress.
 
-Linux distributions
--------------------
+Usage
+-----
 
-Sunzi is Linux distro agnostic in itself.
+To use a recipe, take the URL of the raw text:
 
-But if you haven't settled yet, I'd say [Debian](http://www.debian.org/) with [Dotdeb](http://www.dotdeb.org/) is worth a try.
+![take raw](https://c1.staticflickr.com/5/4753/24997573107_0d8d8eed8a_z.jpg)
 
-Dotdeb is a repository maintained by awesome [Guillaume Plessis](https://twitter.com/w_a_s_t_e), and it has the following packages as of February 29th, 2012:
-
-* Nginx 1.0.12
-* MySQL 5.5.20
-* Redis 2.4.8
-* Percona toolkit 2.0.3
-
-Those packages are as recent as they could get - if you want to catch up with cutting edge features from the latest versions of Nginx, MySQL, Redis, etc. then Dotdeb will definitely make you happy. :)
-
-There's a recipe for you to set up Dotdeb here: https://github.com/kenn/sunzi-recipes/blob/master/debian/dotdeb.sh
-
-To use Dotdeb, put the following piece in `sunzi.yml`:
+and put it in `sunzi.yml`:
 
 ```yaml
 recipes:
-  dotdeb: https://raw.github.com/kenn/sunzi-recipes/master/debian/dotdeb.sh
+  authorized_keys: https://raw.githubusercontent.com/kenn/sunzi-recipes/master/authorized_keys.sh
 ```
 
-with `install.sh`:
+and use it in `install.sh` (source recipes/[name] [args]):
 
 ```bash
-source recipes/dotdeb.sh
-
-apt-get -y install nginx
+source recipes/authorized_keys.sh kenn
 ```
 
-and `sunzi deploy` will install the latest Nginx.
+and `sunzi deploy` will run the configuration change.
 
 Other repositories
 ------------------
