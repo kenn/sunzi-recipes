@@ -3,13 +3,13 @@ Sunzi Recipes
 
 [Sunzi](https://github.com/kenn/sunzi) is a server provisioning tool for minimalists.
 
-This repository is a public source for Sunzi recipes, to demonstrate what Sunzi is capable of.
+This is a public repository for Sunzi recipes, to demonstrate what Sunzi is capable of.
 
-Recipes in this repository can be directly retrieved by `sunzi compile`. Just point to the URL of raw files in `sunzi.yml`.
+Recipes can be directly retrieved by `sunzi compile`. Just point to the URL of a raw file in `sunzi.yml`.
 
-Sunzi is Linux distro agnostic in itself, but in this repository most recipes are [Debian](http://www.debian.org/).
+Sunzi is Linux distro agnostic in itself, but most recipes here are for [Debian](http://www.debian.org/).
 
-**Warning**: Everything in this repository is a work in progress.
+**Warning**: Everything here is a work in progress. Make your own fork when you need a reliable repository.
 
 Usage
 -----
@@ -25,7 +25,7 @@ recipes:
   authorized_keys: https://raw.githubusercontent.com/kenn/sunzi-recipes/master/authorized_keys.sh
 ```
 
-and use it in `install.sh` (source recipes/[name] [args]):
+and use it in `install.sh` (`source recipes/[name].sh [arg1] [arg2] ...`):
 
 ```bash
 source recipes/authorized_keys.sh kenn
